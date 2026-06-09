@@ -35,7 +35,6 @@
             listBoxWant = new ListBox();
             label2 = new Label();
             textBoxM = new TextBox();
-            labelItog = new Label();
             SuspendLayout();
             // 
             // listBoxReady
@@ -101,23 +100,11 @@
             textBoxM.Size = new Size(184, 23);
             textBoxM.TabIndex = 6;
             // 
-            // labelItog
-            // 
-            labelItog.AutoSize = true;
-            labelItog.Font = new Font("Segoe UI", 20F);
-            labelItog.Location = new Point(147, 294);
-            labelItog.Name = "labelItog";
-            labelItog.Size = new Size(90, 37);
-            labelItog.TabIndex = 7;
-            labelItog.Text = "label3";
-            labelItog.Visible = false;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(labelItog);
             Controls.Add(textBoxM);
             Controls.Add(label2);
             Controls.Add(listBoxWant);
@@ -141,6 +128,5 @@
         private ListBox listBoxWant;
         private Label label2;
         private TextBox textBoxM;
-        private Label labelItog;
     }
 }

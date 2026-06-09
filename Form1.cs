@@ -42,8 +42,8 @@ namespace Kollok
         private void button1_Click(object sender, EventArgs e)
         {
             AllPrice *= Convert.ToInt32(textBoxCM.Text);
-            labelItog.Text = $"Итоговая цена ------------ {AllPrice} рублей";
-            labelItog.Visible = true;
+            FormItogi inputForm = new FormItogi(AllPrice);
+            inputForm.ShowDialog();
         }
     }
 }
