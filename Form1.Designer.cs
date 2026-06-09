@@ -30,43 +30,46 @@
         {
             listBoxReady = new ListBox();
             button1 = new Button();
-            textBox1 = new TextBox();
+            textBoxCM = new TextBox();
             label1 = new Label();
             listBoxWant = new ListBox();
             label2 = new Label();
-            textBox2 = new TextBox();
+            textBoxM = new TextBox();
+            labelItog = new Label();
             SuspendLayout();
             // 
             // listBoxReady
             // 
             listBoxReady.FormattingEnabled = true;
             listBoxReady.ItemHeight = 15;
-            listBoxReady.Location = new Point(12, 12);
+            listBoxReady.Location = new Point(27, 12);
             listBoxReady.Name = "listBoxReady";
-            listBoxReady.Size = new Size(120, 199);
+            listBoxReady.Size = new Size(210, 139);
             listBoxReady.TabIndex = 0;
             listBoxReady.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            listBoxReady.DoubleClick += listBoxReady_DoubleClick;
             // 
             // button1
             // 
-            button1.Location = new Point(356, 134);
+            button1.Location = new Point(568, 128);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(184, 23);
             button1.TabIndex = 1;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // textBox1
+            // textBoxCM
             // 
-            textBox1.Location = new Point(356, 30);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(184, 23);
-            textBox1.TabIndex = 2;
+            textBoxCM.Location = new Point(568, 30);
+            textBoxCM.Name = "textBoxCM";
+            textBoxCM.Size = new Size(184, 23);
+            textBoxCM.TabIndex = 2;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(356, 12);
+            label1.Location = new Point(568, 12);
             label1.Name = "label1";
             label1.Size = new Size(184, 15);
             label1.TabIndex = 3;
@@ -76,38 +79,50 @@
             // 
             listBoxWant.FormattingEnabled = true;
             listBoxWant.ItemHeight = 15;
-            listBoxWant.Location = new Point(215, 12);
+            listBoxWant.Location = new Point(313, 12);
             listBoxWant.Name = "listBoxWant";
-            listBoxWant.Size = new Size(120, 199);
+            listBoxWant.Size = new Size(210, 139);
             listBoxWant.TabIndex = 4;
             listBoxWant.SelectedIndexChanged += listBoxWant_SelectedIndexChanged;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(356, 75);
+            label2.Location = new Point(568, 65);
             label2.Name = "label2";
             label2.Size = new Size(153, 15);
             label2.TabIndex = 5;
             label2.Text = "Требуемая длина в метрах";
             // 
-            // textBox2
+            // textBoxM
             // 
-            textBox2.Location = new Point(356, 93);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(184, 23);
-            textBox2.TabIndex = 6;
+            textBoxM.Location = new Point(568, 83);
+            textBoxM.Name = "textBoxM";
+            textBoxM.Size = new Size(184, 23);
+            textBoxM.TabIndex = 6;
+            // 
+            // labelItog
+            // 
+            labelItog.AutoSize = true;
+            labelItog.Font = new Font("Segoe UI", 20F);
+            labelItog.Location = new Point(147, 294);
+            labelItog.Name = "labelItog";
+            labelItog.Size = new Size(90, 37);
+            labelItog.TabIndex = 7;
+            labelItog.Text = "label3";
+            labelItog.Visible = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox2);
+            Controls.Add(labelItog);
+            Controls.Add(textBoxM);
             Controls.Add(label2);
             Controls.Add(listBoxWant);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxCM);
             Controls.Add(button1);
             Controls.Add(listBoxReady);
             Name = "Form1";
@@ -121,10 +136,11 @@
 
         private ListBox listBoxReady;
         private Button button1;
-        private TextBox textBox1;
+        private TextBox textBoxCM;
         private Label label1;
         private ListBox listBoxWant;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox textBoxM;
+        private Label labelItog;
     }
 }
